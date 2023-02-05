@@ -1,0 +1,41 @@
+#li {
+  display: inline;
+  padding: 20px;
+  font-size: large;
+}
+#li2 {
+  display: inline;
+  padding: 100px;
+  font-size: large;
+}
+
+ul {
+  padding-top: 2px;
+  padding-right: 50px;
+  text-align: center;
+}
+
+li:hover {
+  color: rgb(172, 92, 247);
+}
+
+li:active {
+  color: brown;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  background-color: rgb(252, 223, 180);
+}
+
+.header {
+  padding-top: 60px;
+}
+
+.img {
+  padding-top: 100px;
+  text-align: center;
+}

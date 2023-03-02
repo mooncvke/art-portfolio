@@ -1,24 +1,92 @@
-import logo from "./logo.svg";
+import { useState, useEffect } from "react";
+import TradForm from "./components/Traditional";
+import DigiForm from "./components/Digital";
+import PhotoForm from "./components/Photography";
+import HomePage from "./components/Home";
+// import Main from "./components/Main";
+
 import "./App.css";
 
 const App = () => {
-  return (
-    <div>
-      <div class="header">
-        <h1>Art Portfolio</h1>
+  const [page, setPage] = useState("home");
+
+  const Main = () => {
+    const handlePageChange = (value) => {
+      console.log("clicked:", value);
+      setPage(value);
+    };
+    return (
+      <div>
         <ul>
-          <li id="li">Traditional</li>
-          <li id="li">Digital</li>
-          <li id="li">Video</li>
+          <button class="button" onClick={(value) => handlePageChange("home")}>
+            <h1>Art Portfolio</h1>
+          </button>
+        </ul>
+        <ul>
+          <li id="li">
+            <button
+              class="button"
+              onClick={(value) => handlePageChange("traditional")}
+            >
+              Traditional
+            </button>
+          </li>
+          <li id="li">
+            <button
+              class="button"
+              onClick={(value) => handlePageChange("digi")}
+            >
+              Digital
+            </button>
+          </li>
+          <li id="li">
+            <button
+              class="button"
+              onClick={(value) => handlePageChange("photo")}
+            >
+              Photography
+            </button>
+          </li>
         </ul>
       </div>
-      <div class="img">
-        <li id="li2">img1</li>
-        <li id="li2">img2</li>
-        <li id="li2">img3</li>
+    );
+  };
+
+  if (page === "home") {
+    return (
+      <div>
+        {console.log("page: ", page)}
+        <Main></Main>
+        <HomePage></HomePage>
       </div>
-    </div>
-  );
+    );
+  }
+  if (page === "traditional") {
+    return (
+      <div>
+        {console.log("page: ", page)}
+        <Main></Main>
+        <TradForm></TradForm>
+      </div>
+    );
+  }
+  if (page === "digi") {
+    return (
+      <div>
+        {console.log("page: ", page)}
+        <Main></Main>
+        <DigiForm></DigiForm>
+      </div>
+    );
+  }
+  if (page === "photo") {
+    return (
+      <div>
+        <Main></Main>
+        <PhotoForm></PhotoForm>
+      </div>
+    );
+  }
 };
 
 export default App;

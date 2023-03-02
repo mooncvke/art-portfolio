@@ -4,8 +4,7 @@ import DigiForm from "./components/Digital";
 import PhotoForm from "./components/Photography";
 import HomePage from "./components/Home";
 // import Main from "./components/Main";
-
-import "./App.css";
+import "./css/App.css";
 
 const App = () => {
   const [page, setPage] = useState("home");

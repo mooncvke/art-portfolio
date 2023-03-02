@@ -1,0 +1,35 @@
+/* Main functions thingies */
+
+#li {
+  display: inline;
+  padding: 20px;
+  font-size: large;
+}
+
+ul {
+  padding-top: 2px;
+  padding-right: 40px;
+  text-align: center;
+}
+
+button:hover {
+  color: rgb(172, 92, 247);
+}
+
+button:active {
+  color: brown;
+}
+
+.button {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* bacground of whole page */
+body {
+  background-color: rgb(252, 223, 180);
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import TradForm from "./components/Traditional";
 import DigiForm from "./components/Digital";
-import PhotoForm from "./components/Photography";
+import Photography from "./components/Photography";
 import HomePage from "./components/Home";
 // import Main from "./components/Main";
 import "./css/App.css";
@@ -18,7 +18,7 @@ const App = () => {
       <div>
         <ul>
           <button class="button" onClick={(value) => handlePageChange("home")}>
-            <h1>Art Portfolio</h1>
+            <div className="title">Art Portfolio</div>
           </button>
         </ul>
         <ul>
@@ -27,7 +27,7 @@ const App = () => {
               class="button"
               onClick={(value) => handlePageChange("traditional")}
             >
-              Traditional
+              <h3>Traditional</h3>
             </button>
           </li>
           <li id="li">
@@ -35,7 +35,7 @@ const App = () => {
               class="button"
               onClick={(value) => handlePageChange("digi")}
             >
-              Digital
+              <h3>Digital</h3>
             </button>
           </li>
           <li id="li">
@@ -43,10 +43,11 @@ const App = () => {
               class="button"
               onClick={(value) => handlePageChange("photo")}
             >
-              Photography
+              <h3>Photography</h3>
             </button>
           </li>
         </ul>
+        <hr className="line"></hr>
       </div>
     );
   };
@@ -82,7 +83,7 @@ const App = () => {
     return (
       <div>
         <Main></Main>
-        <PhotoForm></PhotoForm>
+        <Photography></Photography>
       </div>
     );
   }
